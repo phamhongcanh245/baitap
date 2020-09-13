@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 void Nhapmang(int a[], int &n)
 {	
@@ -21,19 +21,6 @@ void BubbleSort(int a[], int n)
 			if(a[j]>a[j+1])
 				swap(a, j, j+1);
 }
-int BinarySearch(int a[], int n, int x)
-{
-	int left=0, right=n-1, mid;
-	do
-	{
-    	mid=(left+right)/2;
-    	if(a[mid]==x) 		return mid;
-    	else if(a[mid]<=x)	left=mid+1;
-    	else right=mid-1;
-  	}
-	while(left<=right);
-	return -1;
-}
 void Xuatmang(int a[], int &n)
 { 
 	cout<<"[ ";
@@ -45,14 +32,11 @@ void Xuatmang(int a[], int &n)
 }
 int main()
 {
-	int a[100], n, x;
+	int a[100], n;
 	Nhapmang(a, n);
-	cout<<"Mang: "; Xuatmang(a, n);
-	cout<<"\nNhap gia tri can tim kiem: ";
-	cin>>x;
+	cout<<"Mang ban dau la: "; Xuatmang(a, n);
+	cout<<endl;
 	BubbleSort(a, n);
-	if(BinarySearch(a, n, x)==-1)
-		cout<<"Khong tim thay gia tri thich hop!";
-	else
-		cout<<"Gia tri can tim nam o vi tri a["<<BinarySearch(a, n, x)<<"]";
+	cout<<"Mang khi sap xep la: "; Xuatmang(a, n);
+	return 0;
 }

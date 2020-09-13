@@ -1,13 +1,12 @@
 #include <iostream>
 using namespace std;
-int a[100], n, x;
-void Nhapmang(int a[], int n)
-{
+void Nhapmang(int a[], int &n)
+{	
+	cout<<"Nhap so phan tu cua mang n = "; cin>>n;
 	for(int i=0; i<n; i++)
 	{
-		cout<<"Nhap phan tu a["<<i<<"]: ";
-		cin>>a[i];
-	}
+		cout<<"Phan tu a["<<i<<"]"<<" = "; cin>>a[i];	
+	} 
 }
 void InsertionSort(int a[], int n)
 {
@@ -24,19 +23,22 @@ void InsertionSort(int a[], int n)
     a[pos+1] = x;
 	}
 }
-void Xuatmang(int a[], int n)
-{
-	for(int i=0; i<n; i++)
+void Xuatmang(int a[], int &n)
+{ 
+	cout<<"[ ";
+	for (int i=0; i<n; i++)
 	{
-		cout<<a[i]<<"\t";
+		cout<<a[i]<<" ";
 	}
+	cout<<"]";
 }
 int main()
 {
-	cout<<"Nhap n: ";
-	cin>>n;
+	int a[100], n, x;
 	Nhapmang(a, n);
+	cout<<"Mang ban dau la: "; Xuatmang(a, n);
+	cout<<endl;
 	InsertionSort(a, n);
-	cout<<"Mang sau khi sap xep la:\n";
-	Xuatmang(a, n);
+	cout<<"Mang khi sap xep la: "; Xuatmang(a, n);
+	return 0;
 }
