@@ -1,146 +1,293 @@
 <!DOCTYPE html>
-<html lang="vi"> 
+<html>
 	<head>
-		<title>Bài tập nhóm</title>
 		<meta charset="UTF-8"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/png" href="iconweb.png">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<title>Bài tập nhóm</title>
 		<style type="text/css">
+			*
+			{
+				margin: 0px;
+				padding: 0px;
+			}
 			body
 			{
- 				background-image:url('Background.jpg');
- 				background-attachment: fixed;
- 				padding-top: 20px;
- 				padding-left: 10px; 
+				background-image: url('Background.jpg');
+				background-attachment: fixed;
+			}
+			.clearfix:after
+			{
+				display: block;
+				clear: both;
+			}
+			.menu
+			{
+				width: 1060px;
+				margin: 0px auto;
+				background: #bf5c71;
+				height: 41px;
+				margin-top: 0px;
+			}
+			.menu li
+			{
+				margin: 0px;
+				list-style:none;
+			}
+			.menu a
+			{
+				transition:all linear 0.15s;
+				color: #919191;
+				text-decoration:none;
+			}
+			.menu li:hover > a, .menu .current-item > a
+			{
+				text-decoration:none;
+				color: #be5b70;
+			} 
+			.menu .arrow
+			{
+				font-size: 12px;
+				line-height: 0%;
+			} 
+			.menu > ul > li
+			{
+				float: left;
+				display: inline-block;
+				position: relative;
+				font-size: 18px;
+			}
+			.menu > ul > li > a
+			{
+				padding: 10px 40px;
+				display: inline-block;
+				color: white;
+			}
+			.menu > ul > li:hover > a, .menu > ul > .current-item > a
+			{
+				background: #2e2728;
+			}
+			.menu li:hover .sub-menu
+			{
+				z-index: 1;
+				opacity: 1;
+			}
+			.sub-menu
+			{
+				width: 160%;
+				padding: 5px 0px;
+				position: absolute;
+				top: 100%;
+				left: 0px;
+				z-index: -1;
+				opacity: 0;
+				box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+				background: #2e2728;
+			}
+			.sub-menu li
+			{
+				display: block;
+				font-size: 16px;
+			}
+			.sub-menu li a
+			{
+				padding: 10px 20px;
+				display: block;
+			}
+			.sub-menu li a:hover, .sub-menu .current-item a
+			{
+				background: #3e3436;
+			}
+			.content
+			{
+				padding-top: 10px;
+				box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+				background: #FFFFFF;	
+				width: 1060px;
+				margin: 0px auto;
 			}
 			h1
 			{
-				color: violet;
+				padding: 5px 15px;
+				color: #4F4F4F;
 				margin-left: 20px;
 			}
 			h2
 			{
-				color: white;
+				padding: 5px 15px;
+				color: #4F4F4F;
 				margin-left: 40px;
 			}
 			h3
 			{
-				color: white;
+				padding: 5px 15px;
+				color: #4F4F4F;
 				margin-left: 60px;
 			}
-			ol
-			{
-				color: white;
-			}
-			a:link, a:visited, a:hover, a:active
+			.content a:link, .content a:visited, .content a:hover, .content a:active
 			{
  				text-decoration: none;
- 				color: red;
- 				padding: 5px 10px;
+ 				color: #be5b70;
+ 				padding: 5px 15px;
  				text-align: center;
 				text-decoration: none;
  				display: inline-block;
 			}
+			.content ol
+			{
+				color: #4F4F4F;
+				margin-left: 40px;
+				font-size: 18px;
+			}
+			.logo
+			{
+				box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+				background-image: url('Logo.png');
+				width: 1060px;
+				height: 57px;
+				margin: 0px auto;
+			}
 		</style>
 	</head>
 	<body>
-		<div id="BT21082020">
-			<h1>Bài tập về nhà ngày 21/08/2020</h1>
-			<h3>Bài 1: Thuật toán tìm nghiệm của phương trình bậc 2
-				<a href="Thuat toan giai phuong trinh bac 2.cpp"												target="_blank">Code C++</a>
-				<a href="Lưu đồ thuật toán giải phương trình bậc 2.png"											target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1FT_RU57PB2GCE3rH73Mf12w0HkgseVpc/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-			<h3>Bài 2: Thuật toán tính tổng, hiệu, tích, thương của 2 số
-				<a href="Thuat toan tinh tong, hieu, tich, thuong cua 2 so.cpp"									target="_blank">Code C++</a>
-				<a href="Lưu đồ thuật toán tính tổng, hiệu, tích thương của 2 số.png"							target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1V5LReF4GGHo7Xip7-qvVjclJnouxxdW3/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-			<h3>Bài 3: Thuật toán tính trung bình cộng của 3 số
-				<a href="Thuat toan tinh trung binh cong cua 3 so.cpp"											target="_blank">Code C++</a>
-				<a href="Lưu đồ thuật toán tính trung bình cộng của 3 số.png"									target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1FqowUyGkxhb2MweEWgDRYnhygF1j4Ka2/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
+		<div class="logo"></div>
+		<div class="menu">
+			<ul class="clearfix">
+				<li><a href="index.html">21/08/2020 <span class="arrow">&#9660;</span></a>
+					<ul class="sub-menu">
+						<li><a href="Thuat toan giai phuong trinh bac 2.cpp"                target="_blank">Thuật toán tìm nghiệm của phương trình bậc 2</a></li>
+						<li><a href="Thuat toan tinh tong, hieu, tich, thuong cua 2 so.cpp" target="_blank">Thuật toán tính tổng, hiệu, tích, thương của 2 số</a></li>
+						<li><a href="Thuat toan tinh trung binh cong cua 3 so.cpp"          target="_blank">Thuật toán tính trung bình cộng của 3 số</a></li>
+					</ul>
+				</li>
+				<li><a href="index.html">28/08/2020 <span class="arrow">&#9660;</span></a>
+					<ul class="sub-menu">
+						<li><a href="Thuat toan tim kiem tuan tu.cpp"   target="_blank">Thuật toán tìm kiếm tuần tự</a></li>
+						<li><a href="Thuat toan tim kiem cam canh.cpp"  target="_blank">Thuật toán tìm kiếm cầm canh</a></li>
+						<li><a href="Thuat toan tim kiem nhi phan.cpp"  target="_blank">Thuật toán tìm kiếm nhị phân</a></li>
+						<li><a href="Thuat toan sap xep chon.cpp"       target="_blank">Thuật toán sắp xếp chọn</a></li>
+					</ul>
+				</li>
+				<li><a href="index.html">04/09/2020 <span class="arrow">&#9660;</span></a>
+					<ul class="sub-menu">
+						<li><a href="Thuat toan sap xep chen.cpp"      target="_blank">Thuật toán sắp xếp chèn</a></li>
+						<li><a href="Thuat toan sap xep noi bot.cpp"   target="_blank">Thuật toán sắp xếp nổi bọt</a></li>
+						<li><a href="Thuat toan sap xep tron.cpp"      target="_blank">Thuật toán sắp xếp trộn</a></li>
+						<li><a href="Thuat toan sap xep nhanh.cpp"     target="_blank">Thuật toán sắp xếp nhanh</a></li>
+					</ul>
+				</li>
+				<li><a href="index.html">23/10/2020 <span class="arrow">&#9660;</span></a>
+					<ul class="sub-menu">
+						<li><a href="Thuat toan giai bai toan thap Ha Noi.cpp"  target="_blank">Thuật toán giải bài toán tháp Hà Nội</a></li>
+						<li><a href="Thuat toan giai bai toan Ma di tuan.cpp"   target="_blank">Thuật toán giải bài toán Mã đi tuần</a></li>
+						<li><a href="Thuat toan giai bai toan Tam quan hau.cpp" target="_blank">Thuật toán giải bài toán Tám quân hậu</a></li>
+					</ul>
+				</li>
+				<li><a href="index.html">30/10/2020 <span class="arrow">&#9660;</span></a>
+					<ul class="sub-menu">
+						<li><a href="Thuat toan chuyen tu he thap phan sang he nhi phan khu de quy.cpp"	target="_blank">Thuật toán chuyển từ hệ thập phân sang hệ nhị phân (khử đệ quy)</a></li>
+						<li><a href="Thuat toan giai bai toan thap Ha Noi khu de quy"     				target="_blank">Thuật toán giải bài toán tháp Hà Nội (khử đệ quy)</a></li>
+					</ul>
+				</li>
+				<li><a href="index.html">Thành viên</a></li>
+			</ul>
 		</div>
-		<div id="BT28082020">
-			<h1>Bài tập về nhà ngày 28/08/2020</h1>
-			<h2>Thuật toán tìm kiếm:</h2>
-			<h3>Bài 1: Tìm kiếm tuần tự (Linear Search)
-				<a href="Thuat toan tim kiem tuan tu.cpp"														target="_blank">Code C++</a>
-				<a href="Lưu đồ thuật toán tìm kiếm tuần tự.png"												target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1Hw6g84OoTXwIQA1e9LLhgLsH-azkhvDg/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-			<h3>Bài 2: Tìm kiếm cầm canh (Sporadic Search)
-				<a href="Thuat toan tim kiem cam canh.cpp"														target="_blank">Code C++</a>
-				<a href="Lưu đồ thuật toán bài 1 21082020.png"													target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-			<h3>Bài 3: Tìm kiếm nhị phân (Binary Search)
-				<a href="Thuat toan tim kiem nhi phan.cpp"														target="_blank">Code C++</a>
-				<a href="Lưu đồ thuật toán bài 1 21082020.png"													target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-			<h2>Thuật toán sắp xếp:</h2>
-			<h3>Bài 1: Sắp xếp chọn (Selection Sort)
-				<a href="Sắp xếp chọn.cpp"																		target="_blank">Code C++</a>
-				<a href="Lưu đồ thuật toán bài 1 21082020.png"													target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
+		<div class="content">
+			<div id="BT21082020">
+				<h1>Bài tập về nhà ngày 21/08/2020</h1>
+				<h3>Thuật toán tìm nghiệm của phương trình bậc 2	
+					<a href="Lưu đồ thuật toán giải phương trình bậc 2.png"											target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/10HdPLMt6o4z-Lj2eMBrasgP8ySku2Baz/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+				<h3>Thuật toán tính tổng, hiệu, tích, thương của 2 số	
+					<a href="Lưu đồ thuật toán tính tổng, hiệu, tích thương của 2 số.png"							target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1LDBEp5g9T6rooIDz7elgPNWgV_4udI3O/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+				<h3>Thuật toán tính trung bình cộng của 3 số	
+					<a href="Lưu đồ thuật toán tính trung bình cộng của 3 số.png"									target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1u7o8gtHoqH67-ePH08kKcLOzTW1D45l4/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+			</div>
+			<div id="BT28082020">
+				<h1>Bài tập về nhà ngày 28/08/2020</h1>
+				<h2>Thuật toán tìm kiếm:</h2>
+				<h3>Thuật toán tìm kiếm tuần tự (Linear Search)
+					<a href="Lưu đồ thuật toán tìm kiếm tuần tự.png"												target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1SNaMY1qWSpMReHHVzixZ0gaCmRKgLTJG/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+				<h3>Thuật toán tìm kiếm cầm canh (Sporadic Search)
+					<a href="Lưu đồ thuật toán tìm kiếm cầm canh.png"												target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1_KAAWVaT-bZ8v51pFUaR__ohBSPda2oz/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+				<h3>Thuật toán tìm kiếm nhị phân (Binary Search)
+					<a href="Lưu đồ thuật toán tìm kiếm nhị phân.png"												target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1j4-KWy16gX0U-kAelmOsiAyAaG0t-jxp/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+				<h2>Thuật toán sắp xếp:</h2>
+				<h3>Thuật toán sắp xếp chọn (Selection Sort)
+					<a href="Lưu đồ thuật toán sắp xếp chọn.png"													target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1-RWLrAjLrzZc_XbfvvswZDQJ61L9dUD-/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+			</div>
+			<div id="BT04092020">
+				<h1>Bài tập về nhà ngày 04/09/2020</h1>
+				<h3>Thuật toán sắp xếp chèn (Insertion Sort)
+					<a href="Lưu đồ thuật toán sắp xếp chèn.png"													target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+				<h3>Thuật toán sắp xếp nổi bọt (Bubble Sort)
+					<a href="Lưu đồ thuật toán sắp xếp nổi bọt.png"													target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+				<h3>Thuật toán sắp xếp trộn (Merge Sort)
+					<a href="Lưu đồ thuật toán sắp xếp trộn.png"													target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+				<h3>Thuật toán sắp xếp nhanh (Quick Sort)
+					<a href="Lưu đồ thuật toán sắp xếp nhanh.png"													target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+			</div>
+			<div id="BT23102020">
+				<h1>Bài tập về nhà ngày 23/10/2020</h1>
+				<h3>Thuật toán giải bài toán Tháp Hà Nội
+					<a href="Lưu đồ thuật toán giải bài toán Tháp Hà Nội.png"										target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+				<h3>Thuật toán giải bài toán Mã đi tuần
+					<a href="Lưu đồ thuật toán giải bài toán Mã đi tuần.png"										target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+				<h3>Thuật toán giải bài toán Tám quân hậu
+					<a href="Lưu đồ thuật toán giải bài toán Tám quân hậu.png"										target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+			</div>
+			<div id="BT30102020">
+				<h1>Bài tập về nhà ngày 30/10/2020</h1>
+				<h3>Thuật toán chuyển từ hệ thập phân sang hệ nhị phân (khử đệ quy)
+					<a href="Lưu đồ thuật toán chuyển từ hệ thập phân sang hệ nhị phân (khử đệ quy).png"			target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+				<h3>Thuật toán giải bài toán Tháp Hà Nội (khử đệ quy)
+					<a href="Lưu đồ thuật toán giải bài toán Tháp Hà Nội (khử đệ quy).png"							target="_blank">Lưu đồ thuật toán</a>
+					<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
+				</h3>
+			</div>
+			<div class="thanhvien">
+				<h2>Các thành viên trong nhóm:</h2>
+				<ol type =1>
+					<li>Phạm Hồng Cảnh (Trưởng nhóm)</li>
+					<li>Nguyễn Vũ Đức Anh</li>
+					<li>Bùi Thị Hiền</li>
+					<li>Khuất Thị Thảo Nguyên</li>
+					<li>Lã Thị Phương</li>
+					<li>Lương Văn Tứ</li>
+					<li>Phạm Tuấn Việt</li>
+					</span>
+				</ol>
+			</div>
 		</div>
-		<div id="BT04092020">
-			<h1>Bài tập về nhà ngày 04/09/2020</h1>
-			<h3>Bài 2: Sắp xếp chèn (Insertion Sort)
-				<a href="InsertionSort.cpp"																		target="_blank">Code C++</a>
-				<a href="LinearSearch.cpp"																		target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-			<h3>Bài 3: Sắp xếp nổi bọt (Bubble Sort)
-				<a href="BubbleSort.cpp"																		target="_blank">Code C++</a>
-				<a href="LinearSearch.cpp"																		target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-			<h3>Bài 4: Sắp xếp trộn (Merge Sort)
-				<a href="MergeSort.cpp"																			target="_blank">Code C++</a>
-				<a href="LinearSearch.cpp"																		target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-			<h3>Bài 5: Sắp xếp nhanh (Quick Sort)
-				<a href="QuickSort.cpp"																			target="_blank">Code C++</a>
-				<a href="LinearSearch.cpp"																		target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-		</div>
-		<div id="chuanbi23102020">
-			<h1>Chuẩn bị bài tập ngày 23/10/2020</h1>
-			<h3>Bài 1: Bài toán Tháp Hà Nội
-				<a href="LinearSearch.cpp"																		target="_blank">Code C++</a>
-				<a href="LinearSearch.cpp"																		target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-			<h3>Bài 2: Bài toán Mã đi tuần
-				<a href="SporadicSearch.cpp"																	target="_blank">Code C++</a>
-				<a href="LinearSearch.cpp"																		target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-			<h3>Bài 3: Bài toán Tám quân hậu
-				<a href="BinarySearch.cpp"																		target="_blank">Code C++</a>
-				<a href="LinearSearch.cpp"																		target="_blank">Lưu đồ thuật toán</a>
-				<a href="https://drive.google.com/file/d/1Pi_c7toJsD-9oUtVqlSaoNLIRk_7PJqk/view?usp=sharing"	target="_blank">Download</a>
-			</h3>
-		</div>
-		<div id="thanhvien">
-			<h2>Các thành viên trong nhóm:</h2>
-			<ol type =1>
-				<span style="font-size: 18px">
-				<li>Phạm Hồng Cảnh (Trưởng nhóm)</li>
-				<li>Nguyễn Vũ Đức Anh</li>
-				<li>Bùi Thị Hiền</li>
-				<li>Khuất Thị Thảo Nguyên</li>
-				<li>Lã Thị Phương</li>
-				<li>Lương Văn Tứ</li>
-				<li>Phạm Tuấn Việt</li>
-				</span>
-			</ol>
-		</div>		
 	</body>
 </html>
